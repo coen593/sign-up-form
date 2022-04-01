@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Righteous&display=swap');
+
+:root {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+#imageSection {
+    width: 40vw;
+    background-image: url('https://images.unsplash.com/photo-1591664811881-69c19c01b37f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=530&q=80');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+#logo {
+    display: flex;
+    height: 20vh;
+    margin-top: 20vh;
+    margin-bottom: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.8);
+}
+
+#logo>h1 {
+    color: white;
+    font-size: 60px;
+    font-family: 'Righteous', 'Open Sans', sans-serif;
+}
+
+#formSection {
+    width: 60vw;
+}
