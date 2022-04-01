@@ -8,6 +8,7 @@
     <title>Sign Up Form</title>
     <link rel="stylesheet" href="meyer-reset.css">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -21,31 +22,43 @@
         <div id="formSection">
             <div id="top">
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, animi placeat. Quaerat id explicabo voluptatibus, blanditiis impedit molestias amet! Totam quaerat animi mollitia tempora illo non laborum modi quam et.
+                    Lorem ipsum dolor sit, <em>amet consectetur adipisicing elit</em>. Quibusdam, animi placeat. Quaerat id explicabo voluptatibus, blanditiis.
                 </p>
-                <p>Lorem ipsum dolor sit, amet consectetur.</p>
+                <p>Lorem ipsum <em>dolor sit</em>, amet consectetur.</p>
             </div>
             <div id="mid">
                 <form action="#">
                     <div id="formFields">
                         <legend>Let's do it!</legend>
                         <fieldset>
-                            <label for="firstName">FIRST NAME</label>
-                            <input type="text" id="firstName">
-                            <label for="lastName">LAST NAME</label>
-                            <input type="text" id="lastName">
+                            <div>
+                                <input placeholder=" " required type="text" id="firstName">
+                                <label for="firstName">First name</label>
+                            </div>
+                            <div>
+                                <input placeholder=" " required type="text" id="lastName">
+                                <label for="lastName">Last name</label>
+                            </div>
                         </fieldset>
                         <fieldset>
-                            <label for="email">EMAIL</label>
-                            <input type="email" id="email">
-                            <label for="phone">PHONE NUMBER</label>
-                            <input type="tel" id="phone">
+                            <div>
+                                <input placeholder=" " required type="email" id="email">
+                                <label for="email">Email</label>
+                            </div>
+                            <div>
+                                <input placeholder=" " required type="tel" id="phone">
+                                <label for="phone">Phone number</label>
+                            </div>
                         </fieldset>
                         <fieldset>
-                            <label for="pass">PASSWORD</label>
-                            <input type="password" id="pass">
-                            <label for="confirmPass">CONFIRM PASSWORD</label>
-                            <input type="password" id="confirmPass">
+                            <div>
+                                <input placeholder=" " required type="password" id="pass">
+                                <label for="pass">Password</label>
+                            </div>
+                            <div>
+                                <input placeholder=" " required type="password" id="confirmPass">
+                                <label for="confirmPass">Confirm Password</label>
+                            </div>
                         </fieldset>
                     </div>
                     <button class="btn" type="submit">Create Account</button>
