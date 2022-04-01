@@ -32,27 +32,30 @@
                         <legend>Let's do it!</legend>
                         <fieldset>
                             <div>
-                                <input placeholder=" " required type="text" id="firstName">
+                                <input placeholder=" " required type="text" id="firstName" minlength="2" maxlength="20">
                                 <label for="firstName">First name</label>
                             </div>
                             <div>
-                                <input placeholder=" " required type="text" id="lastName">
+                                <input placeholder=" " required type="text" id="lastName" minlength="2" maxlength="20">
                                 <label for="lastName">Last name</label>
                             </div>
                         </fieldset>
                         <fieldset>
                             <div>
-                                <input placeholder=" " required type="email" id="email">
+                                <input placeholder=" " required type="email" id="email" minlength="6">
                                 <label for="email">Email</label>
                             </div>
                             <div>
-                                <input placeholder=" " required type="tel" id="phone">
+                                <input placeholder=" " required type="tel" id="phone" minlength="9" maxlength="14"
+                                pattern="[0-9]{0,14}$" title="Number should include digits only">
                                 <label for="phone">Phone number</label>
                             </div>
                         </fieldset>
                         <fieldset>
                             <div>
-                                <input placeholder=" " required type="password" id="pass">
+                                <input placeholder=" " required type="password" id="pass" 
+                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" 
+                                title="Password should include at least 1 uppercase, 1 lowercase, 1 number and 1 symbol and be between 8 - 12 characters.">
                                 <label for="pass">Password</label>
                             </div>
                             <div>
