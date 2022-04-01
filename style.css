@@ -7,6 +7,7 @@
     --main-dark-color: rgb(5, 5, 92);
     --main-light-color: #eff1f5;
     --input-error-color: #c40e0e;
+    --input-correct-color: #14b605;
     --input-selected-color: #b2c7e0;
     --padding-left: 40px;
     --padding-right: 80px;
@@ -85,14 +86,14 @@ form>button {
     padding:0;
 }
 
-#formFields {
+.formFields {
     background-color: white;
     width: 100%;
     padding: 10px 0;
     box-shadow: 4px 4px 10px var(--input-selected-color);
 }
 
-#formFields>* {
+.formFields>* {
     padding-left: var(--padding-left);
     padding-right: var(--padding-right);
     margin: 25px 0;
@@ -127,8 +128,28 @@ input:focus {
     box-shadow: 1px 1px 2px var(--input-selected-color);
 }
 
-input.error {
-    border-color: var(--input-error-color)
+input:not(:placeholder-shown):valid {
+    border-color: var(--input-correct-color)
+}
+
+fieldset.error {
+    margin-bottom: 2px;
+}
+
+fieldset.error input[type='password'] {
+    border-color: var(--input-error-color);
+}
+
+#errorWrapper {
+    color: var(--input-error-color);
+    font-size: 0.5em;
+    display: none;
+    margin: 0;
+    padding: none;
+}
+
+#errorWrapper.error {
+    display: block;
 }
 
 label {
@@ -176,7 +197,7 @@ input:not(:placeholder-shown) + label {
 }
 
 @media (max-width: 1250px) {
-    #formFields>* {
+    .formFields>* {
         padding-right: var(--padding-left);
     }
 }
@@ -235,15 +256,14 @@ input:not(:placeholder-shown) + label {
     }
 
     #top p {
-        font-size: 1em;
+        font-size: 0.9em;
     }
 
     fieldset {
         flex-direction: column;
-
     }
 
-    #formFields>* {
+    .formFields>* {
         margin: 0;
     }
 
@@ -276,6 +296,10 @@ input:not(:placeholder-shown) + label {
     @media (max-height: 800px) {
         #top {
             margin: 0;
+        }
+
+        .btn {
+            margin-top: 15px;
         }
     }
 }
